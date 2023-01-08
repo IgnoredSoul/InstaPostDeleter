@@ -41,9 +41,8 @@ async def DeleteMedia():
     print("Deleting...")
 
     for id in ids:
-        if(deletedMedia < int(len(ids)) - 5):
-            cl.media_delete(id)
-            print("\rDeleted ({}/{})".format(deletedMedia, int(len(ids) - 5)), end="           ")
-            deletedMedia += 1
+        cl.media_delete(id)
+        print("\rDeleted ({}/{})".format(deletedMedia, int(len(ids) - 5)), end="           ")
+        deletedMedia += 1
 
 asyncio.run(DeleteMedia())
