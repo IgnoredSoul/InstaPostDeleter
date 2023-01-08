@@ -42,7 +42,7 @@ async def DeleteMedia():
 
     for id in ids:
         cl.media_delete(id)
-        print("\rDeleted ({}/{})".format(deletedMedia, int(len(ids) - 5)), end="           ")
+        print("\rDeleted ({}/{})".format(deletedMedia, len(ids)), end="           ")
         deletedMedia += 1
 
 asyncio.run(DeleteMedia())
